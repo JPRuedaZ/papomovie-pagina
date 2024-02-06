@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Proyecto de M2</h1>
-
-    <script src="./scripts/tempData.js"></script>
-    <script src="./scripts/index.js"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/styles.css"
+  <title></title>
+</head>
+<body>
+  <header class="header">
+    <div><img src="./styles/assets/logomovie.PNG" alt="Logo" id="logo"></div>
+    <div class="title-pag"><h1>🎬🎥 PM 🎬🎥</h1></div>
+    <nav class="nav-bar">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./paginas estaticas/portafolio.html">Sobre mi</a></li>
+          <li><a href="./paginas estaticas/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <section class="peliculas">
+      <div class="mensaje-section">
+        <h2>Listado de películas</h2>
+        <p>Aca estan las peliculas mas solicitadas de la temporada</p>
+      </div>
+      <div class="container-peliculas" id="container"></div>
+    </section>
+    
+    <section class="informacion-adicional">
+      <h2>Información adicional</h2>
+      <p>Aquí puedes incluir información adicional sobre las películas, como trailers, críticas, etc.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Derechos reservados por Juan Pablo RZ &copy; 2023</p>
+  </footer>
+  <script src="./scripts/tempData.js"></script>
+  <script src="./scripts/index.js"></script>
+</body>
 </html>
+

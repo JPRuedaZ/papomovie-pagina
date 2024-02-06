@@ -1,0 +1,55 @@
+/* Reset de estilos por defecto */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos específicos para algunos elementos */
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 1em 0;
+  }
+  
+  p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 1em 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul, ol {
+    list-style: none;
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Restablecer estilos de elementos de formulario */
+  
+  input, textarea, select {
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,203 @@
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    overflow-x: hidden; /* Evitar el desplazamiento horizontal en dispositivos pequeños */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-image: url('./assets/fondo.jpg');
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  #logo {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+    
+    animation: pulseLogo 2s infinite ease-in-out;; /* Animación para girar el logo */
+  }
+  
+  .title-pag h1 {
+    font-size: 2em;
+    color: rgb(227, 15, 15); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0 15px;
+    transition: color 0.3s ease; /* Transición de color suave */
+  }
+  
+  .nav-bar a:hover {
+    color: red; /* Cambio de color al pasar el mouse */
+  }
+  
+  /* Main Section Styles */
+  main {
+    padding: 20px;
+  }
+  
+  .peliculas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: slideInRight 1s ease;
+  }
+  
+  .mensaje-section {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .container-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  /* Estilos para la tarjeta de películas */
+.tarjeta {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Efecto de transición suave al pasar el mouse */
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  background-color: gainsboro;
+}
+
+/* Estilos para el título de la película */
+.title-movie {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el año de la película */
+.year {
+  color: #777;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+/* Estilos para la duración de la película */
+.duration {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+/* Estilos para la calificación de la película */
+.rate {
+  color: #ffcc00; /* Color amarillo para destacar */
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen de la película */
+.img {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+  
+  /* Información Adicional Styles */
+  .informacion-adicional {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease; /* Animación de entrada desde la izquierda */
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-image: url('/fondo.jpg');
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Animaciones Keyframes */
+  @keyframes pulseLogo {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }  
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .nav-bar {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .nav-bar a {
+      margin: 10px 0;
+    }
+  }
+  
