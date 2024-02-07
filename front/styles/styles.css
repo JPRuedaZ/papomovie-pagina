@@ -1,4 +1,3 @@
-/* Reset CSS */
 body, h1, h2, h3, p, ul, li, figure {
     margin: 0;
     padding: 0;
@@ -19,7 +18,7 @@ body, h1, h2, h3, p, ul, li, figure {
   
   /* Header Styles */
   .header {
-    background-image: url('./assets/fondo.jpg');
+    background-image: url('./assets/fondo1.jpg');
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -82,6 +81,7 @@ body, h1, h2, h3, p, ul, li, figure {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     justify-items: center;
+    
   }
 
   /* Estilos para la tarjeta de películas */
@@ -94,6 +94,7 @@ body, h1, h2, h3, p, ul, li, figure {
   text-align: center;
   transition: transform 0.3s ease; /* Efecto de transición suave al pasar el mouse */
   cursor: pointer;
+  width: 350px;
 }
 
 .tarjeta:hover {
@@ -129,6 +130,7 @@ body, h1, h2, h3, p, ul, li, figure {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
+  animation: destello 1s infinite;
 }
 
 /* Estilos para la imagen de la película */
@@ -152,7 +154,7 @@ body, h1, h2, h3, p, ul, li, figure {
   
   /* Footer Styles */
   .footer {
-    background-image: url('/fondo.jpg');
+    background-image: url('./assets/fondo1.jpg');
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -186,6 +188,18 @@ body, h1, h2, h3, p, ul, li, figure {
     }
     to {
       transform: translateX(0);
+    }
+  }
+
+  @keyframes destello {
+    0% {
+      opacity: 1; /* Opacidad al inicio de la animación */
+    }
+    50% {
+      opacity: 0.5; /* Opacidad a la mitad de la animación */
+    }
+    100% {
+      opacity: 1; /* Opacidad al final de la animación */
     }
   }
   
