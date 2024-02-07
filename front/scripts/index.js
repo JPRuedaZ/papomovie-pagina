@@ -1,13 +1,17 @@
 //MODO FUNCIONAL
+/*Esta es una funcion que realiza una solicitud GET a la API de peliculas y cuando la solicitud se completa se ejecuta
+una funcion que toma dos parametros data y status. Luego dentro de esta funcion de devolucion de llamada,se itera sobre 
+cada pelicula en data(que es un array de Objetos) utilizando el forEach(que modifica el array original) y en ese metodo 
+se llama la funcion convertirHTML pasando la peli como argumento, lo que los convierte en elementos de HTML. */ 
 const dataApi = function () {
   $.get("https://students-api.2.us-1.fl0.io/movies", (data, status) => {
-    data.map((movie => convertirHTML(movie)));
+    data.forEach((movie => convertirHTML(movie)));
   });
 };
 
 dataApi();
 
-//Aca creo la funcion que me convierte la Pelicula a etiquetas de HTML para que el DOM pueda leerlo.
+//Aca es una función que convierte una película en elementos HTML y los agrega al contenedor con el id "container".
 const convertirHTML = (movie) => {
   console.log(movie);
   let { title, year, duration, rate, poster } = movie;
