@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li, figure {
     line-height: 1.6;
     background-color: #f8f8f8;
     color: #333;
-    overflow-x: hidden; /* Evitar el desplazamiento horizontal en dispositivos pequeños */
+    overflow-x: hidden; 
   }
   
   .container {
@@ -16,7 +16,7 @@ body, h1, h2, h3, p, ul, li, figure {
     margin: 0 auto;
   }
   
-  /* Header Styles */
+  
   .header {
     background-image: url('./assets/fondo1.jpg');
     color: #fff;
@@ -25,37 +25,23 @@ body, h1, h2, h3, p, ul, li, figure {
   }
   
   #logo {
-    width: 80px; /* Ajusta el tamaño según sea necesario */
-    
-    animation: pulseLogo 2s infinite ease-in-out;; /* Animación para girar el logo */
+    width: 80px; 
+    margin-bottom: 20px;
+    animation: pulseLogo 2s infinite ease-in-out;; 
   }
   
   .title-pag h1 {
     font-size: 2em;
     color: rgb(227, 15, 15); 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px;
   }
-  
-  .nav-bar ul {
-    list-style: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-bar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2em;
-    margin: 0 15px;
-    transition: color 0.3s ease; /* Transición de color suave */
-  }
-  
-  .nav-bar a:hover {
-    color: red; /* Cambio de color al pasar el mouse */
-  }
-  
-  /* Main Section Styles */
+ .navbar {
+   height: 50px;
+   width: 70px;
+   margin-left: 10px;
+   background-color: none;
+ }
   main {
     padding: 20px;
   }
@@ -76,7 +62,7 @@ body, h1, h2, h3, p, ul, li, figure {
     font-size: large;
   }
   
-  .container-peliculas {
+  #repositorio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -84,62 +70,39 @@ body, h1, h2, h3, p, ul, li, figure {
     
   }
 
-  /* Estilos para la tarjeta de películas */
-.tarjeta {
+  
+ .tarjeta {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease; /* Efecto de transición suave al pasar el mouse */
+  transition: transform 0.3s ease; 
   cursor: pointer;
   width: 350px;
 }
 
 .tarjeta:hover {
-  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  transform: scale(1.05); 
   background-color: gainsboro;
 }
 
-/* Estilos para el título de la película */
-.title-movie {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Estilos para el año de la película */
-.year {
-  color: #777;
-  font-size: 1em;
-  margin-bottom: 5px;
-}
-
-/* Estilos para la duración de la película */
-.duration {
-  color: #555;
-  font-size: 0.9em;
-  margin-bottom: 5px;
-}
-
-/* Estilos para la calificación de la película */
 .rate {
-  color: #ffcc00; /* Color amarillo para destacar */
+  color: #ffcc00; 
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
   animation: destello 1s infinite;
 }
 
-/* Estilos para la imagen de la película */
+
 .img {
   width: 250px;
   height: 300px;
   border-radius: 5px;
   margin-bottom: 10px;
-}
+} */
 
   
   /* Información Adicional Styles */

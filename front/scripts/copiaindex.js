@@ -74,11 +74,9 @@ class Pelicula {
   function mostrarPeliculas(movie) {
     
     const container = document.getElementById("container");
-    container.innerHTML = "";
-  
     const lista = movie.getAllPeliculas();
   
-    const mapeo = lista.map((movie) => convertirHTML(movie));
+    const mapeo = lista.map(movie => convertirHTML(movie));
   
     mapeo.forEach((movie) => container.appendChild(movie));
   }
@@ -90,6 +88,8 @@ class Pelicula {
       if(status === 'success'){
       data.forEach((movie) => repositorio.createPelicula(movie));
       mostrarPeliculas(repositorio);
+    } else {
+      return alert("Error al cargar la informacion")
     }
     })
   }
