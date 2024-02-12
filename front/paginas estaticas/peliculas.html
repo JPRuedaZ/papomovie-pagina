@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Construccion.....</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <a><img src="../styles/assets/logomovie 2.png" alt="Logo" id="logomovie" style="cursor: pointer; width: 40px;" onclick="window.location.href='../index.html'"></a>
-    <img src="./styles/assets/images/pikachu gif.gif" alt="construccion">
+  <header class="header">
+    <div><img src="../styles/assets/logomovie 2.png" alt="Logo" id="logo"></div>
+    <div class="title-pag"><h1>🎬🎥 PM 🎬🎥</h1></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary text-bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../paginas estaticas/styles/assets/images/nav bar.png" alt="menu">
+              </a>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item fw-semibold" href="../index.html">Inicio</a></li>
+                <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/peliculas.html">Peliculas</a></li>
+                <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/portafolio.html">Sobre mi</a></li>
+                <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/contacto.html">Contacto</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="peliculas">
+      <div class="mensaje-section">
+        <h2 class="fw-bold">Listado de generos </h2>
+        <p class="fw-normal mt-4">Aca estan las peliculas de acuerdo a sus generos</p>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active btn-genres" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" data-genero="Action" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Accion</button>
+          <button class="nav-link btn-genres" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" data-genero="Adventure" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Aventura</button>
+          <button class="nav-link btn-genres" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" data-genero="Comedy" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Comedia</button>
+          <button class="nav-link btn-genres" id="nav-scifi-tab" data-bs-toggle="tab" data-bs-target="#nav-scifi" data-genero="Sci-Fi" type="button" role="tab" aria-controls="nav-scifi" aria-selected="false">Ciencia Ficcion</button>
+          <button class="nav-link btn-genres" id="nav-drama-tab" data-bs-toggle="tab" data-bs-target="#nav-drama" data-genero="Drama" type="button" role="tab" aria-controls="nav-drama" aria-selected="false">Drama</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0"></div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0"></div>
+        <div class="tab-pane fade" id="nav-scifi" role="tabpanel" aria-labelledby="nav-scifi-tab" tabindex="0"></div>
+        <div class="tab-pane fade" id="nav-drama" role="tabpanel" aria-labelledby="nav-drama-tab" tabindex="0"></div>
+      </div>
+      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded d-flex flex-row " id="repositorio"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Derechos reservados por Juan Pablo RZ &copy; 2024</p>
+  </footer>
+  <script src="../public/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
