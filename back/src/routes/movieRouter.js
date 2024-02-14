@@ -1,6 +1,6 @@
 //Aca se importa el Router de express.
 const {Router} = require("express");
-//Aca se importa funcion controladora movieController.
+//Aca se importa funcion controladora movieController,destructurando con objeto.
 const {movieController} = require("../controllers/movieController");
 
 //Aca se crea el router.
