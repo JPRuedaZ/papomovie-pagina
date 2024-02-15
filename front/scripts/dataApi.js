@@ -6,7 +6,7 @@ const fetchData = async function () {
     try{
       /*se almacena el llamado en la variable dataApi que trae el await que espera a que la promesa que viene 
       en el metodo get sea resuelta y este retorna la data de la API(el array de objetos [{}]*/ 
-      const dataApi = await axios.get("https://students-api.2.us-1.fl0.io/movies"); 
+      const dataApi = await axios.get("http://localhost:3000/movies"); 
       return dataApi.data;
      
     
