@@ -1,10 +1,10 @@
-const movies = require("./dataMovies");
+const axios = require("axios");
 
 
 const movieService = {
-    obtenerPeliculas: async () => {
-        return movies;
-        
+    obtenerPeliculas: async (url) => {
+        const response = await axios.get(url);
+        return response.data;
     },
 
     agregarPelicula: async (movie) => {

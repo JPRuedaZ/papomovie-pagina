@@ -1,13 +1,13 @@
 const Movie = require("../services/movieClass");
-const movies = require("../services/dataMoviesClass");
+const axios = require("axios");
 
 
 const movieServiceClass = {
 
-    obtenerPeliculas: async () => {
+    obtenerPeliculas: async (url) => {
         try {
-            
-            return movies.map(movie =>  new Movie(movie.id,movie.title, movie.year, movie.duration, movie.genre, movie.rate, movie.poster, movie.director));
+            const response = await axios.get(url);
+            return response.data.map(movie =>  new Movie(movie.id, movie.title, movie.year, movie.duration, movie.genre, movie.rate, movie.poster, movie.director));
             
         } catch (error) {
             console.log('Error al obtener las pelis');
