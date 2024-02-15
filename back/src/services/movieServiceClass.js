@@ -1,10 +1,10 @@
 const Movie = require("../services/movieClass");
 const axios = require("axios");
-
+const url = "https://henry-movies-dev-sgtm.3.us-1.fl0.io";
 
 const movieServiceClass = {
 
-    obtenerPeliculas: async (url) => {
+    obtenerPeliculas: async () => {
         try {
             const response = await axios.get(url);
             return response.data.map(movie =>  new Movie(movie.id, movie.title, movie.year, movie.duration, movie.genre, movie.rate, movie.poster, movie.director));

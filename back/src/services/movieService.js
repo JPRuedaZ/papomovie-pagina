@@ -1,10 +1,14 @@
 const axios = require("axios");
-
+const url = "https://henry-movies-dev-sgtm.3.us-1.fl0.io";
 
 const movieService = {
-    obtenerPeliculas: async (url) => {
-        const response = await axios.get(url);
+    obtenerPeliculas: async () => { try {
+      const response = await axios.get(url);
         return response.data;
+    } catch (error) {
+      console.log('Error al obtener las pelis');
+    }
+        
     },
 
     agregarPelicula: async (movie) => {
