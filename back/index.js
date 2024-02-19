@@ -1,8 +1,16 @@
 const app = require("./src/server"); //Aca se importa el servidor.
+const dbConfig = require('./src/config/dBConfig')
 
-const PORT = 3001; //Aca se define el puerto
+const PORT = 3000; //Aca se define el puerto
 
+//Aca ejecuto el llamado a la base de datos antes de levantar o iniciar el servidor.
+dbConfig().then((res) => {
 //Aca se inicia el servidor para que escuche las peticiones o solicitudes HTTP que se van a pasar.
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-}) 
+    app.listen(PORT, () => {
+        console.log(`Servidor corriendo en el puerto ${PORT}`);
+    }) 
+}).catch((error) => {
+    console.log(error);
+})
+
+
