@@ -1,5 +1,5 @@
 const app = require("./src/server"); //Aca se importa el servidor.
-const dbConfig = require('./src/config/dBConfig')
+const dbConfig = require('./src/config/dBConfig') //Aca se importa la funcion que configura la base de datos.
 
 const PORT = 3000; //Aca se define el puerto
 
