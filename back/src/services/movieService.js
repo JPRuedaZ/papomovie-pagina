@@ -12,11 +12,11 @@ const movieService = {
       const movies = await Movie.find();
         return movies;  
     },
-
+    
     agregarPelicula: async (movie) => {
       const movieExist = await Movie.findOne({title: movie.title});
       if (movieExist) {
-        throw new Error('La peli ya existe');
+        throw new Error('La pelicula ya existe');
       } else {
         try {
           const newMovie = await Movie.create(movie);

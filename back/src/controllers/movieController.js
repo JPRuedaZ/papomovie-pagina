@@ -17,7 +17,7 @@ const moviePostController = async (req,res) => {
         await movieService.agregarPelicula({title,year,director,duration,genre,rate,poster,description});
         res.status(201).json({message:'Pelicula agregada'});
     } catch (error) {
-        res.status(500).json({message:'No se agrego la pelicula por que ya esta creada'});
+        res.status(500).json({message:'No se agrego la pelicula', error:error.message});
         //console.log(error.message);
         
     }
