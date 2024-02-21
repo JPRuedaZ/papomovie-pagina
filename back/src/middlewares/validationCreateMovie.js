@@ -7,7 +7,7 @@ if (!title || typeof title !== 'string' || title.trim() === '') {
 }
 
 // Verifica que el año sea un número entero y esté en un rango aceptable
-if (!year || isNaN(year) || !Number.isInteger(year) || year < 1850 || year > 2024) {
+if (!year || isNaN(year) || year < 1850 || year > 2024) {
     throw new Error('El año debe ser un número entero válido entre 1850 y el año actual');
 }
 
@@ -17,7 +17,7 @@ if (!duration || !duration.includes('h') && !duration.includes('min') || typeof 
 }
 
 // Verifica que el género sea una cadena no vacía
-if (!genre || typeof genre !== 'string' || genre.trim() === '') {
+if (!genre) {
     throw new Error('El género es requerido y debe ser una cadena no vacía.');
 }
 
