@@ -11,4 +11,16 @@ const movieController = async (req,res) => {
     
 }
 
-module.exports = {movieController}; //Aca se exporta el movieController como un objeto destructurado.
+const moviePostController = async (req,res) => {
+    try {
+         const {title,year,director,duration,genre,rate,poster,description} = req.body;
+        await movieService.agregarPelicula({title,year,director,duration,genre,rate,poster,description});
+        res.status(201).json({message:'Pelicula agregada'});
+    } catch (error) {
+        res.status(500).json({message:'No se agrego la pelicula por que ya esta creada'});
+        //console.log(error.message);
+        
+    }
+}
+
+module.exports = {movieController, moviePostController}; //Aca se exporta el movieController como un objeto destructurado.

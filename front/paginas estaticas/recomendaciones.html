@@ -29,7 +29,6 @@
                 <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/peliculas.html">Peliculas</a></li>
                 <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/portafolio.html">Sobre mi</a></li>
                 <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/contacto.html">Contacto</a></li>
-                <li><a class="dropdown-item fw-semibold" href="../paginas estaticas/recomendaciones.html">Recomendaciones</a></li>
               </ul>
             </li>
           </ul>
@@ -38,28 +37,46 @@
     </nav>
   </header>
   <main>
-    <section class="peliculas">
-      <div class="mensaje-section">
-        <h2 class="fw-bold">Listado de generos </h2>
-        <p class="fw-normal mt-4">Aca estan las peliculas de acuerdo a sus generos</p>
-      </div>
-      <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link btn-genres p-3 ml-3 bg-danger text-white" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" data-genero="Action" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Accion</button>
-          <button class="nav-link btn-genres p-3 ml-3 bg-danger text-white" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" data-genero="Adventure" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Aventura</button>
-          <button class="nav-link btn-genres p-3 ml-3 bg-danger text-white" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" data-genero="Comedy" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Comedia</button>
-          <button class="nav-link btn-genres p-3 ml-3 bg-danger text-white" id="nav-scifi-tab" data-bs-toggle="tab" data-bs-target="#nav-scifi" data-genero="Sci-Fi" type="button" role="tab" aria-controls="nav-scifi" aria-selected="false">Ciencia Ficcion</button>
-          <button class="nav-link btn-genres p-3 ml-3 bg-danger text-white" id="nav-drama-tab" data-bs-toggle="tab" data-bs-target="#nav-drama" data-genero="Drama" type="button" role="tab" aria-controls="nav-drama" aria-selected="false">Drama</button>
+    <section class="recomendaciones">
+        <h2>Que pelicula te gustaria ver?</h2>
+    <form class="form-recomendation" action="#" method="post">
+        <div>
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" placeholder="Nombre de la pelicula" required>
         </div>
-      </nav>
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0"></div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"></div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0"></div>
-        <div class="tab-pane fade" id="nav-scifi" role="tabpanel" aria-labelledby="nav-scifi-tab" tabindex="0"></div>
-        <div class="tab-pane fade" id="nav-drama" role="tabpanel" aria-labelledby="nav-drama-tab" tabindex="0"></div>
+        <div>
+            <label for="year">Año:</label>
+            <input type="number" id="year" name="year" placeholder="Año de la pelicula" min="1850" max="2024" required>
+        </div>
+        <div>
+          <label for="director">Director:</label>
+          <input type="text" id="director" name="director" placeholder="Nombre del director" required>
       </div>
-      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded d-flex flex-row " id="repositorio"></div>
+        <div>
+            <label for="duration">Duración:</label>
+            <input type="text" id="duration" name="duration" placeholder="Duracion de la pelicula [Ej: 2h 16min]" required>
+        </div>
+        <div>
+            <label for="genre">Género:</label>
+            <input type="text" id="genre" name="genre" placeholder="Generos de la pelicula" required>
+        </div>
+        <div>
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate" min="1" max="10" placeholder="Califica la pelicula de 1 a 10" required>
+        </div>
+        <div>
+            <label for="poster">Póster URL:</label>
+            <input type="url" id="poster" name="poster" placeholder="Coloca la URL de la imagen" required>
+        </div>
+        <div>
+          <label for="description">Descripción:</label>
+          <input type="text" id="description" name="description" placeholder="Descripción de la película" required></input>
+      </div>
+        <div class="botones">
+        <button type="button" id="send" value="send" >Enviar</button>
+        <button type="button" id="clear" value="clear" >Borrar</button>
+        </div>
+    </form>
     </section>
   </main>
   <footer class="footer">

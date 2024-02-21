@@ -4,6 +4,7 @@ const filterPelis = require("./filterPelis");
 
 //Aca se crea la funcion eventsDom que recibe la dataApi(array de objetos [{}])
 const eventsDom = function (dataApi) {
+  
   //Se llaman los botones del navbar que tiene la lista de generos en el HTML.
   const buttonGeneros = document.getElementsByClassName("btn-genres");
   //Se crea un for para recorrer el array de botones(pq es un HTML Collection que es un [])
@@ -16,10 +17,11 @@ const eventsDom = function (dataApi) {
       const repo = document.getElementById("repositorio");
       //se vacia el contenedor cada vez que se presiona un genero(que se ejecuta el evento click en el boton).
       repo.innerHTML = "";
+      console.log(repo);
       /*Se llama a la funcion filterPelis que recibe dos argumentos (dataApi(el array de objetos) 
         y genero(el genero de la pelicula que viene dado por el evento del click en el boton que accedería al valor
         del atributo de datos genero que esta en el atributo de la etiqueta HTML))*/
-      filterPelis(dataApi, event.target.dataset.genero).forEach((movie) =>
+      filterPelis(dataApi,event.target.dataset.genero).forEach((movie) =>
         cargarDom(movie, "repositorio") /*Aca despues de que se filtra el array de objetos se llama al metodo forEach que recibe
       la funcion cargarDom para cargar la pelicula en el contenedor HTML con el id repositorio.*/
 

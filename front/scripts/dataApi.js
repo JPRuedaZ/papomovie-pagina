@@ -1,6 +1,6 @@
-//Se llama la libreria axios para hacer llamadas a la API y responder en promesa.
+//Se llama la libreria axios para hacer llamadas a la BD y responder en promesa.
 const axios = require("axios");
-//Se crea la funcion asincrona para hacer el llamado a la API y traer la data de la API.
+//Se crea la funcion asincrona para hacer el llamado a la BD y traer la data de la API.
 const fetchData = async function () {
   //lo metemos dentro del try/catch para darle manejo a los errores.
     try{
@@ -8,6 +8,7 @@ const fetchData = async function () {
       en el metodo get sea resuelta y este retorna la data de la API(el array de objetos [{}]*/ 
       const dataApi = await axios.get("http://localhost:3000/movies"); 
       return dataApi.data;
+      
      
     
     }

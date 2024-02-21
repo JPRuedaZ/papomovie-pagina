@@ -9,7 +9,7 @@ const cargarDom = (movieObj, container) => {
   //Se llama a la funcion convertirHTML para convertir el objeto en HTML y se almacena en la variable cardHTML
   const cardHTML = convertirHTML(movieObj);
   //Se agrega la cardHTML al contenedor(se inserta al HTML).
-  containerMovie.appendChild(cardHTML);
+  containerMovie?.appendChild(cardHTML);
 };
 
 //Se exporta la funcion cargarDom.

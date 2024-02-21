@@ -2,6 +2,10 @@
 const cargarDom = require("./cargarDom");
 const dataInfo = require("./dataApi");
 const eventsDom = require("./eventGenerosDom");
+const buttonLimpiar = document.querySelector('#clear');
+const limpiarFormulario = require("./clearForm");
+const buttonEnviar = document.querySelector('#send');
+const createMovieForm = require("./selectForm");
 
 //Se crea la funcion para la pagina de inicio, como se hace una llamada para la API de la pagina de inicio. 
 const inicio = async function () {
@@ -20,6 +24,9 @@ paginas de inicio y peliculas) para mostrar las peliculas en el contenedor HTML 
   } catch (error) {
     console.log(error);
   }
-};
+  buttonLimpiar?.addEventListener('click', limpiarFormulario);
+  buttonEnviar?.addEventListener('click', createMovieForm);
+  
+} 
 //Aca como este archivo es el entrypoint para organizar los modulos, se llama la funcion inicio.
 inicio();

@@ -1,5 +1,5 @@
 //Aca llamo el modelo 
-const Movie = require('../models/Movies');
+const Movie = require('../models/Movie');
 
 /*Aca llamo el servicio que es una funcion asincrona y va y me busca 
 en la base de datos, en este caso me trae todas las pelis, 
@@ -14,7 +14,17 @@ const movieService = {
     },
 
     agregarPelicula: async (movie) => {
-      
+      const movieExist = await Movie.findOne({title: movie.title});
+      if (movieExist) {
+        throw new Error('La peli ya existe');
+      } else {
+        try {
+          const newMovie = await Movie.create(movie);
+          return newMovie;
+        } catch (error) {
+          console.log(error)
+        }
+      }
     }
 
 }
