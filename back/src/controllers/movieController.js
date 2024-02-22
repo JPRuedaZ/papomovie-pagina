@@ -11,6 +11,7 @@ const movieController = async (req,res) => {
     
 }
 
+//Aca creo la funcion controladora que responde la peticion POST y maneja el servicio
 const moviePostController = async (req,res) => {
     try {
          const {title,year,director,duration,genre,rate,poster,description} = req.body;

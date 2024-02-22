@@ -13,19 +13,20 @@ const movieService = {
         return movies;  
     },
     
+    /*Aca creo la */ 
     agregarPelicula: async (movie) => {
-      //const movieExist = await Movie.findOne({title: movie.title});
-      //if (movieExist) {
-        //throw new Error('La pelicula ya existe');
-      //} else {
+      const movieExist = await Movie.findOne({title: movie.title});
+      if (movieExist) {
+        throw new Error('La pelicula ya existe');
+      } else {
         try {
           const newMovie = await Movie.create(movie);
           return newMovie;
         } catch (error) {
-          console.log(error)
+          console.log('este es el error:',error)
         }
       }
-    //}
+    }
 
 }
 //Exporto el servicio al controlador.
