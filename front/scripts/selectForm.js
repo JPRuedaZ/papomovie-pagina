@@ -20,7 +20,7 @@ const error = validateForm({title, year, duration, genre, rate, poster, director
      return;
 }
 //console.log({title, year, duration, genre, rate, poster, director});
-    const promesa = await axios.post("http://localhost:3000/movies", {title, year, duration, genre, rate, poster, director});
+    const promesa = await axios.post("https://papomovie-pagina.onrender.com/movies", {title, year, duration, genre, rate, poster, director});
     alert(`Se creo la pelicula con el status ${promesa.status}✔`);
 
     } catch (error) {
